@@ -23,6 +23,12 @@ function CardCart({ item }: CardCartProps) {
 
 	const subtotal = Number(item.preco) * item.quantidade
 
+	const itemId = item.id
+
+	if (itemId === undefined) {
+		return null
+	}
+
 	return (
 		<div className="flex flex-col gap-4 bg-white rounded-lg p-4 shadow-sm border border-gray-200 sm:flex-row">
 			<div className="w-full h-32 shrink-0 bg-gray-50 rounded-lg p-2 flex items-center justify-center sm:w-32">
@@ -38,10 +44,12 @@ function CardCart({ item }: CardCartProps) {
 					<h3 className="font-semibold text-gray-800 mb-1">
 						{item.nome}
 					</h3>
+
 					<p className="text-sm text-gray-500 mb-2">
 						Categoria:{" "}
 						{item.categoria?.tipo ?? "Sem categoria"}
 					</p>
+
 					<p className="text-xl font-bold text-blue-600">
 						{formatarPreco(Number(item.preco))}
 					</p>
@@ -51,7 +59,7 @@ function CardCart({ item }: CardCartProps) {
 					<div className="flex items-center gap-2 border border-gray-300 rounded-lg">
 						<button
 							type="button"
-							onClick={() => removerItem(item.id)}
+							onClick={() => removerItem(itemId)}
 							aria-label={`Diminuir quantidade de ${item.nome}`}
 							className="p-2 hover:bg-gray-100 rounded-l-lg transition-colors"
 						>
@@ -67,7 +75,7 @@ function CardCart({ item }: CardCartProps) {
 
 						<button
 							type="button"
-							onClick={() => adicionarItem(item.id)}
+							onClick={() => adicionarItem(itemId)}
 							aria-label={`Aumentar quantidade de ${item.nome}`}
 							className="p-2 hover:bg-gray-100 rounded-r-lg transition-colors"
 						>
@@ -80,7 +88,7 @@ function CardCart({ item }: CardCartProps) {
 
 					<button
 						type="button"
-						onClick={() => removerProduto(item.id)}
+						onClick={() => removerProduto(itemId)}
 						className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
 						title="Remover produto"
 						aria-label={`Remover ${item.nome} do carrinho`}
