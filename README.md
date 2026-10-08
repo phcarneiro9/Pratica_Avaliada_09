@@ -72,3 +72,5 @@ Praticar **React, TypeScript, autenticação, consumo de API REST, CRUD, rotas p
 **Patrick Carneiro**
 
 [GitHub](https://github.com/phcarneiro9)
+
+<!-- README refresh -->
