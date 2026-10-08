@@ -1,25 +1,14 @@
-<div align="center">
+# 🎮 Loja Games — Front-end
 
-# Prática Avaliada 09 — Loja Games
+Aplicação web desenvolvida com **React + TypeScript**, integrada a uma API REST em **Spring Boot**.
 
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Axios](https://img.shields.io/badge/Axios-HTTP-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+O projeto simula uma loja de games com autenticação, gerenciamento de produtos e categorias, perfil de usuário e carrinho de compras.
 
-### Aplicação Online
+## 🌐 Aplicação online
 
-https://pratica-avaliada-09.onrender.com
+**[Acessar aplicação](https://pratica-avaliada-09.onrender.com)**
 
-</div>
-
-Projeto desenvolvido em **React + TypeScript**, integrado a uma API REST em **Spring Boot**.
-
-A aplicação simula uma Loja Games com autenticação, CRUD de categorias e produtos, perfil e carrinho de compras.
-
----
-
-## Funcionalidades
+## 🚀 Funcionalidades
 
 - Cadastro e login
 - Rotas protegidas
@@ -30,12 +19,9 @@ A aplicação simula uma Loja Games com autenticação, CRUD de categorias e pro
 - Perfil do usuário
 - Layout responsivo
 
----
+## 🛠️ Tecnologias
 
-## Tecnologias
-
-### Frontend
-
+### Front-end
 - React
 - TypeScript
 - Vite
@@ -43,103 +29,46 @@ A aplicação simula uma Loja Games com autenticação, CRUD de categorias e pro
 - Axios
 - React Router DOM
 
-### Backend
-
+### Back-end
 - Java
 - Spring Boot
 - Spring Security
 - JWT
 - MySQL
 
-Backend:
+## 🔗 API
 
-https://github.com/phcarneiro9/Loja_Games_API
+O front-end foi desenvolvido para consumir a API:
 
----
+**[Loja Games API](https://github.com/phcarneiro9/Loja_Games_API)**
 
-## API
-
-Principais endpoints:
-
-```text
-POST /auth/login
-POST /auth/register
-
-GET    /produtos
-POST   /produtos
-PUT    /produtos
-DELETE /produtos/{id}
-
-GET    /categorias
-POST   /categorias
-PUT    /categorias
-DELETE /categorias/{id}
-```
-
-Autenticação:
-
-```text
-Authorization: Bearer <token>
-```
-
----
-
-## Configuração
-
-Crie um arquivo `.env`:
+A URL da API deve ser configurada em `.env`:
 
 ```env
-VITE_API_URL=https://loja-games-api.onrender.com
+VITE_API_URL=sua-url-da-api
 ```
 
-Para ambiente local:
-
-```env
-VITE_API_URL=http://localhost:8082
-```
-
----
-
-## Executar
+## ▶️ Como executar
 
 ```bash
+git clone https://github.com/phcarneiro9/Pratica_Avaliada_09.git
+cd Pratica_Avaliada_09
 npm install
 npm run dev
 ```
 
-Build:
+Para gerar o build:
 
 ```bash
 npm run build
 ```
 
----
+## 🎯 Objetivo
 
-## Deploy
+Praticar **React, TypeScript, autenticação, consumo de API REST, CRUD, rotas protegidas e desenvolvimento de aplicações web completas**.
 
-Frontend:
-
-```text
-https://pratica-avaliada-09.onrender.com
-```
-
-Backend:
-
-```text
-https://loja-games-api.onrender.com
-```
-
-CORS:
-
-```text
-http://localhost:5173,https://pratica-avaliada-09.onrender.com
-```
-
----
-
-## Autor
+## 👨‍💻 Autor
 
 **Patrick Carneiro**
 
-https://github.com/phcarneiro9
-</div>
+[GitHub](https://github.com/phcarneiro9)
